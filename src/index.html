@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <title>تسک دوره جاوااسکریپت</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+
+  <body>
+    <section class="app container">
+      <div class="page-heading">
+        <h2>لیست تراکنش ها</h2>
+        <form class="search-form">
+          <input
+            type="text"
+            class="transactions__search"
+            placeholder="جستجو تراکنش..."
+          />
+          <span>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+        </form>
+      </div>
+      <div class="transactions-container">
+        <div class="btn-container">
+          <button class="transactions-btn">بار گذاری تراکنش ها</button>
+        </div>
+        <div class="transactions-list">
+          <h3 class="transactions__title">لیست تراکنش های شما</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>ردیف</th>
+                <th>نوع تراکنش</th>
+                <th>
+                  مبلغ <i class="fa-solid fa-chevron-down" id="sort-price"></i>
+                </th>
+                <th>شماره پیگیری</th>
+                <th>
+                  تاریخ تراکنش
+                  <i class="fa-solid fa-chevron-down" id="sort-date"></i>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="transactions__body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
